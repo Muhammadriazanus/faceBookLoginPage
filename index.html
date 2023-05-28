@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    
+    .formContainer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .connectPasswordContainer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropDownContanier{
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropDownContanier .dropdown button{
+        background-color: white;
+        color: black;
+    }
+    .genderContainer{
+        /* margin: 10px 20px 10px 136px;
+        
+        */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10px 20px ;
+    }
+    .genderContainer label{
+        background-color: white;
+        color: black;
+    }
+    .logoContainer h1{
+        font-size: 10px;
+        color: rgb(0, 76, 255);
+    }
+    .logoContainer  h4{
+        color: blue;
+        font-size: 5rem;
+        font-weight: 100;
+
+
+    }
+    body{
+        display: flex;
+        justify-content: flex-end;
+    }
+</style>
+
+<body>
+    <div class="logoContainer">
+        <div id="imagContainer">
+            <h4>facebook</h4>
+            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam blanditiis fugiat doloremque ullam eaque, magnam quod iure! <br> Animi cupiditate corporis facilis quia odit at quaerat earum temporibus suscipit, repudiandae neque facere tempore dignissimos nihil. Voluptas ratione non <br> ab quo deserunt molestiae ex aliquid! Sit libero illum cum, magni voluptatibus commodi.</h1>
+    </div>
+    </div>
+    
+    
+    <div class="container d-flex justify-content-center align-items-center " style="height: 100%; margin-top: 50%;">
+        
+        <!-- login -->
+        
+        <div style="width: 50%; margin-top: -126%;" class="d-flex flex-column align-items-center">
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control-plaintext"  id="email">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="login">Login</button>
+            <p>forgotten password</p>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@mdo">Create Account</button>
+
+        
+        
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header modalHeading_S">
+                        <h5 class="modal-title" id="exampleModalLabel">SignUp</h5>
+                        <h6 class="modal-title" id="exampleModalLabel">It's quick and easy</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <!-- firstName or surName dispaly flex -->
+                            <div class="formContainer">
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">FirstName:</label>
+                                <input type="text" class="form-control" placeholder="Enter your FristName" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">SurName:</label>
+                                <input type="text" class="form-control" placeholder="Enter your surName" id="recipient-surname">
+                            </div>
+                        </div>
+                        <div class="connectPasswordContainer">
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">MobileNum:</label>
+                                <input type="text" class="form-control" placeholder="Enter Your MobileNum" id="recipient-mobile">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">New Password:</label>
+                                <input type="password" class="form-control" placeholder="Enter your Password" id="recipient-pass">
+                            </div>
+                        </div>
+
+                            <!--  DROP DOWN-->
+                            <div class="dropDownContanier">
+                            
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  month
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('january')">january</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('febuary')">febuary</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('march')"> march</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('april')"> april</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('may')"> may</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('june')"> june</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('july')"> july</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getMonthHandler('august')"> august</button></li>
+                                </ul>
+                              </div>
+
+                              <!-- date -->
+
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  date
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(1)">1</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(2)">2</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(3)">3</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(4)">4</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(5)">5</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(6)">6</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(7)">7</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(8)">8</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(9)">9</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getDateHandler(10)">10</button></li>
+                                </ul>
+                              </div>
+
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  year
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2000)">2000</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2001)">2001</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2002)">2002</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2003)">2003</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2004)">2004</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2005)">2005</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2006)">2006</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2007)">2007</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2008)">2008</button></li>
+                                  <li><button class="dropdown-item" type="button" onclick="getYearHandler(2009)">2009</button></li>
+                                </ul>
+                              </div>
+                            </div>
+
+
+                            <div class="genderContainer">
+                              <input type="radio" class="btn-check" name="options-outlined" id="success-outlined"
+                                autocomplete="off" checked>
+                            <label class="btn btn-outline-success" for="success-outlined" onclick="getGenderHandler('Male')">Male</label>
+
+                            <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined"
+                                autocomplete="off">
+                            <label class="btn btn-outline-danger" for="danger-outlined" onclick="getGenderHandler('Female')">Female</label>
+                        </div>
+                            
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="signup">Signup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
